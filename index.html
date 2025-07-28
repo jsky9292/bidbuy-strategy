@@ -532,18 +532,16 @@
             }
             
             .goals-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 12px;
             }
 
-            .goals-grid .goal-card:nth-child(5) {
-                grid-column: 1 / -1;
-                max-width: 200px;
-                margin: 0 auto;
-            }
-
             .goal-card {
-                padding: 18px 12px;
+                padding: 18px 15px;
+                min-height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
             .problems-grid, .roadmap-grid {
@@ -587,18 +585,9 @@
         }
 
         @media (max-width: 480px) {
-            .goals-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            
-            .goals-grid .goal-card:nth-child(5) {
-                grid-column: auto;
-                max-width: none;
-            }
-            
             .goal-card {
                 padding: 16px 12px;
+                min-height: 110px;
             }
 
             .performance-table {
