@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="비드바이 코리아 운영혁신 전략서 - 성과 기반 파트너십 모델">
+    <meta name="keywords" content="비드바이, 경매대행, 구매대행, 마케팅 전략">
+    <title>비드바이 코리아 운영혁신 전략서</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+            padding: 20px 15px;
+        }
+
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .strategy-overview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .strategy-overview h2 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .goal-card {
+            background: rgba(255,255,255,0.15);
+            padding: 20px 15px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .goal-number {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .goal-label {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            opacity: 0.95;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .cs-problems {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .problem-category {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 6px solid;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .category-transparency { 
+            border-left-color: #e74c3c; 
+            background: linear-gradient(135deg, #ffeaea 0%, #ffffff 100%);
+        }
+        .category-shipping { 
+            border-left-color: #f39c12; 
+            background: linear-gradient(135deg, #fff4e6 0%, #ffffff 100%);
+        }
+        .category-quality { 
+            border-left-color: #9b59b6; 
+            background: linear-gradient(135deg, #f4f0ff 0%, #ffffff 100%);
+        }
+        .category-system { 
+            border-left-color: #3498db; 
+            background: linear-gradient(135deg, #e8f4ff 0%, #ffffff 100%);
+        }
+        .category-communication { 
+            border-left-color: #27ae60; 
+            background: linear-gradient(135deg, #eafaf1 0%, #ffffff 100%);
+        }
+
+        .problem-category h4 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .problem-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-list li {
+            padding: 6px 0;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .monthly-roadmap {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .month-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border-top: 6px solid;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .month-1 { 
+            border-top-color: #3498db;
+            background: linear-gradient(135deg, #e8f4ff 0%, #ffffff 100%);
+        }
+        .month-2 { 
+            border-top-color: #27ae60;
+            background: linear-gradient(135deg, #eafaf1 0%, #ffffff 100%);
+        }
+        .month-3 { 
+            border-top-color: #f39c12;
+            background: linear-gradient(135deg, #fff4e6 0%, #ffffff 100%);
+        }
+        .month-4 { 
+            border-top-color: #e74c3c;
+            background: linear-gradient(135deg, #ffeaea 0%, #ffffff 100%);
+        }
+        .month-5 { 
+            border-top-color: #9b59b6;
+            background: linear-gradient(135deg, #f4f0ff 0%, #ffffff 100%);
+        }
+        .month-6 { 
+            border-top-color: #1abc9c;
+            background: linear-gradient(135deg, #e0f8f8 0%, #ffffff 100%);
+        }
+
+        .month-number {
+            position: absolute;
+            top: -15px;
+            right: 15px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .month-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+
+        .month-revenue {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 12px;
+        }
+
+        .month-tasks {
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            font-size: clamp(20px, 4vw, 28px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #555;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+        }
+
+        .metric-value {
+            font-weight: 700;
+            color: #27ae60;
+            font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+        }
+
+        .metric-value.current {
+            color: #3498db;
+        }
+
+        .metric-value.target {
+            color: #e74c3c;
+        }
+
+        .viral-strategies {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 20px 15px;
+            margin: 20px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .viral-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .viral-item {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .viral-item h5 {
+            margin-bottom: 8px;
+            color: #ffeaa7;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+        }
+
+        .viral-item p {
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: clamp(0.9rem, 2vw, 1.05rem);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-cs {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .btn-marketing {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        }
+
+        .btn-education {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+        }
+
+        .success-factors {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 20px 15px;
+            margin: 20px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .factor-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .factor-icon {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .factor-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .factor-desc {
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 600;
+        }
+
+        .section-title.white {
+            color: white;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .performance-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            font-weight: 600;
+        }
+
+        .performance-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+        }
+
+        .performance-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* 모바일 전용 스타일 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .goals-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .problems-grid, .roadmap-grid, .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .viral-grid, .factors-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .performance-table {
+                font-size: 12px;
+            }
+
+            .performance-table th,
+            .performance-table td {
+                padding: 8px 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .goal-card {
+                padding: 15px 10px;
+            }
+
+            .performance-table {
+                font-size: 11px;
+            }
+
+            .performance-table th,
+            .performance-table td {
+                padding: 6px 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 비드바이 코리아 운영혁신 전략서</h1>
+            <p>17년 브랜드 신뢰 기반 디지털 트랜스포메이션</p>
+        </div>
+
+        <div class="strategy-overview">
+            <h2>💡 성과 기반 파트너십 6개월 목표</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <span class="goal-number">2억원</span>
+                    <span class="goal-label">월수수료 목표<br>(1.25억 → 2억)</span>
+                </div>
+                <div class="goal-card">
+                    <span class="goal-number">32%</span>
+                    <span class="goal-label">구매대행 비중<br>(23% → 32%)</span>
+                </div>
+                <div class="goal-card">
+                    <span class="goal-number">7,300건</span>
+                    <span class="goal-label">월 총 거래건수<br>(5,653 → 7,300)</span>
+                </div>
+                <div class="goal-card">
+                    <span class="goal-number">3.56억원</span>
+                    <span class="goal-label">누적 순증가분<br>(6개월 총합)</span>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <strong>성과 기반 파트너십:</strong> 기준점(월 1억) 초과 달성 시 순증가분 기준<br>
+                실제 GA4 검색데이터 기반 정밀 마케팅으로 확실한 성과 창출 (위스키 12,859회, 수집품 18,342회)
+            </div>
+        </div>
+
+        <!-- CS 불만사항 분석 -->
+        <div class="cs-problems">
+            <h2 class="section-title">📋 웹 데이터 기반 CS 불만사항 분석 (20가지)</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-category category-transparency">
+                    <h4>💰 요금 투명성 부족 (4가지)</h4>
+                    <ul class="problem-list">
+                        <li>1차 결제 후 2차 추가청구 문제</li>
+                        <li>예상비용과 실제비용 차이</li>
+                        <li>배송비 경쟁력 부족 (타사 대비 비쌈)</li>
+                        <li>세금 계산 복잡성 (관세/부가세)</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category category-shipping">
+                    <h4>📦 배송 관련 불만 (4가지)</h4>
+                    <ul class="problem-list">
+                        <li>포장/배송비 딜레마 (안전 vs 비용)</li>
+                        <li>부피무게 산정 불만 ("부풀리기" 의혹)</li>
+                        <li>배송 지연 (현지+국제 이중지연)</li>
+                        <li>파손 위험 (재포장 유료화 부담)</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category category-quality">
+                    <h4>🔍 상품/서비스 품질 (4가지)</h4>
+                    <ul class="problem-list">
+                        <li>가품 판별 어려움 → 명품감정사 협업 기회</li>
+                        <li>경매 실패 위험</li>
+                        <li>출품자 신뢰도 부족</li>
+                        <li>상품 상태 확인 한계</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category category-system">
+                    <h4>💻 웹사이트/시스템 (4가지)</h4>
+                    <ul class="problem-list">
+                        <li>노후된 UI/UX (17년된 디자인)</li>
+                        <li>모바일 최적화 부족</li>
+                        <li>개발 속도 지연</li>
+                        <li>실시간 정보 부족 (배송추적/환율)</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category category-communication">
+                    <h4>📞 고객 소통 문제 (4가지)</h4>
+                    <ul class="problem-list">
+                        <li>CS 응답 지연 (24시간+)</li>
+                        <li>전문성 부족 (관세/통관 정보)</li>
+                        <li>개인화 서비스 미흡</li>
+                        <li>사후관리 부족</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 월별 실행 계획 -->
+        <div class="monthly-roadmap">
+            <h2 class="section-title">📅 단계별 월간 실행 로드맵</h2>
+            
+            <div class="roadmap-grid">
+                <div class="month-card month-1">
+                    <div class="month-number">1</div>
+                    <div class="month-title">위스키 마케팅 집중</div>
+                    <div class="month-revenue">1.2억원 (순증가: 1,500만원)</div>
+                    <div class="month-tasks">
+                        • GA4 데이터: 위스키 검색 12,859회<br>
+                        • 일본 한정 위스키 전용 코너<br>
+                        • 위스키 감정사 협업 발표<br>
+                        • 진품 보증서 발급 베타 런칭<br>
+                        • <strong>광고비 월 500만원</strong>
+                    </div>
+                </div>
+
+                <div class="month-card month-2">
+                    <div class="month-number">2</div>
+                    <div class="month-title">명품감정사 협업 본격화</div>
+                    <div class="month-revenue">1.35억원 (순증가: 3,000만원)</div>
+                    <div class="month-tasks">
+                        • 진품보증 시스템 정식 런칭<br>
+                        • 시계/가방/액세서리 감정사 계약<br>
+                        • "비드바이 진품마크" 브랜딩<br>
+                        • 언론 홍보 및 신뢰도 마케팅<br>
+                        • <strong>광고비 월 500만원</strong>
+                    </div>
+                </div>
+
+                <div class="month-card month-3">
+                    <div class="month-number">3</div>
+                    <div class="month-title">수집품 커뮤니티 공략</div>
+                    <div class="month-revenue">1.5억원 (순증가: 4,300만원)</div>
+                    <div class="month-tasks">
+                        • GA4 데이터: 모형 검색 18,342회<br>
+                        • 1/43 다이캐스트 전문 코너<br>
+                        • 수집가 등급제 도입<br>
+                        • B2B 수집품샵 10개 계약<br>
+                        • <strong>광고비 월 700만원</strong>
+                    </div>
+                </div>
+
+                <div class="month-card month-4">
+                    <div class="month-number">4</div>
+                    <div class="month-title">조선 앤틱 화제 마케팅</div>
+                    <div class="month-revenue">1.7억원 (순증가: 6,300만원)</div>
+                    <div class="month-tasks">
+                        • GA4 데이터: 조선/이조 13,052회<br>
+                        • "조선의 보물 고향 찾기" 프로젝트<br>
+                        • 문화재 전문가 협업<br>
+                        • 언론 화제성 극대화<br>
+                        • <strong>광고비 월 700만원</strong>
+                    </div>
+                </div>
+
+                <div class="month-card month-5">
+                    <div class="month-number">5</div>
+                    <div class="month-title">교육사업 + VIP 프리미엄</div>
+                    <div class="month-revenue">1.85억원 (순증가: 7,500만원)</div>
+                    <div class="month-tasks">
+                        • 셀러 아카데미 100명 달성<br>
+                        • 물류 대행 서비스 본격화<br>
+                        • Platinum VIP 컨시어지 서비스<br>
+                        • 개인 맞춤 큐레이션<br>
+                        • <strong>광고비 월 1,000만원</strong>
+                    </div>
+                </div>
+
+                <div class="month-card month-6">
+                    <div class="month-number">6</div>
+                    <div class="month-title">전 영역 시너지 극대화</div>
+                    <div class="month-revenue">2억원 (순증가: 9,000만원)</div>
+                    <div class="month-tasks">
+                        • <strong>월 수수료 2억원 달성</strong><br>
+                        • 모든 전략의 통합 시너지<br>
+                        • 고객 생애가치(LTV) 극대화<br>
+                        • 안정적 월 2억 체계 완성<br>
+                        • <strong>누적 순증가분 3.56억원</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 월별 성과 추적 테이블 -->
+            <h3 class="section-title">📊 월별 성과 추적표</h3>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>월차</th>
+                        <th>목표 수수료</th>
+                        <th>광고비</th>
+                        <th>증가분</th>
+                        <th>순증가분</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1개월</strong></td>
+                        <td>1.2억원</td>
+                        <td>500만원</td>
+                        <td>2,000만원</td>
+                        <td><strong>1,500만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2개월</strong></td>
+                        <td>1.35억원</td>
+                        <td>500만원</td>
+                        <td>3,500만원</td>
+                        <td><strong>3,000만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>3개월</strong></td>
+                        <td>1.5억원</td>
+                        <td>700만원</td>
+                        <td>5,000만원</td>
+                        <td><strong>4,300만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>4개월</strong></td>
+                        <td>1.7억원</td>
+                        <td>700만원</td>
+                        <td>7,000만원</td>
+                        <td><strong>6,300만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>5개월</strong></td>
+                        <td>1.85억원</td>
+                        <td>1,000만원</td>
+                        <td>8,500만원</td>
+                        <td><strong>7,500만원</strong></td>
+                    </tr>
+                    <tr style="background: #e8f5e8;">
+                        <td><strong>6개월</strong></td>
+                        <td><strong>2억원</strong></td>
+                        <td><strong>1,000만원</strong></td>
+                        <td><strong>1억원</strong></td>
+                        <td><strong>9,000만원</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 핵심 지표 대시보드 -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">성과 기반 파트너십 구조</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">기준점</span>
+                    <span class="metric-value current">월 1억원</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">목표 수수료</span>
+                    <span class="metric-value target">월 2억원</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">분배 구조</span>
+                    <span class="metric-value">순증가분 기준</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-title">GA4 데이터 기반 전략</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">위스키/주류 검색</span>
+                    <span class="metric-value">12,859회 (1위)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">수집품/모형 검색</span>
+                    <span class="metric-value">18,342회</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">조선/이조 검색</span>
+                    <span class="metric-value">13,052회</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💎</div>
+                    <div class="card-title">차별화 전략 (신뢰도 향상)</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">명품감정사 협업</span>
+                    <span class="metric-value">가품→기회 전환</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">진품보증 시스템</span>
+                    <span class="metric-value">업계 최초</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">프리미엄 수수료</span>
+                    <span class="metric-value">15%→20% 상승</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📈</div>
+                    <div class="card-title">6개월 누적 성과 예상</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">총 투자비</span>
+                    <span class="metric-value">5,200만원</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">누적 순증가분</span>
+                    <span class="metric-value">3.56억원</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">ROI</span>
+                    <span class="metric-value">585%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 바이럴 마케팅 전략 -->
+        <div class="viral-strategies">
+            <h2 class="section-title white">🎬 스토리텔링 바이럴 마케팅 전략 (20가지)</h2>
+            <p style="text-align: center; margin-bottom: 20px; opacity: 0.95; font-size: clamp(1rem, 2.5vw, 1.1rem); font-weight: 500;">
+                실사례와 썰 기반 콘텐츠로 작은 비용 큰 효과
+            </p>
+            
+            <div class="viral-grid">
+                <div class="viral-item">
+                    <h5>🇯🇵 한국에 없는 일본 필수템</h5>
+                    <p>일본 여행객이 반드시 사는 숨은 아이템 매주 소개</p>
+                </div>
+                <div class="viral-item">
+                    <h5>💰 1만원 일본 직구 챌린지</h5>
+                    <p>저예산 가성비 상품 발굴, 비교 후기 인증</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🎮 오타쿠 성지순례 쇼핑</h5>
+                    <p>아키하바라 쇼핑 가이드, 애니굿즈 한정판</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🏪 일본 편의점 신상품 먼저</h5>
+                    <p>한국 출시 전 미리 체험하는 특별함</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🕰️ 빈티지 헌터의 경매 일기</h5>
+                    <p>희귀 아이템 발굴 과정 실시간 공유</p>
+                </div>
+                <div class="viral-item">
+                    <h5>💄 K-뷰티 vs J-뷰티 성분분석</h5>
+                    <p>피부타입별 맞춤 제품 추천</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🍜 현지인도 모르는 맛집 상품</h5>
+                    <p>일본 로컬 브랜드 식품, 현지 직원 추천</p>
+                </div>
+                <div class="viral-item">
+                    <h5>💝 덕질 인생템 찾기 프로젝트</h5>
+                    <p>팬들의 최애 아이템 커스텀 검색</p>
+                </div>
+                <div class="viral-item">
+                    <h5>📈 환율 롤러코스터 타기</h5>
+                    <p>똑똑한 직구 타이밍 가이드</p>
+                </div>
+                <div class="viral-item">
+                    <h5>📖 17년 베테랑의 직구 썰</h5>
+                    <p>비드바이 초기부터의 특별한 에피소드</p>
+                </div>
+                <div class="viral-item">
+                    <h5>❌ 일본 직구 실패담 & 성공법</h5>
+                    <p>직구 초보자 주의사항, 실제 고객 사례</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🎯 경매 입찰 심리전 게임</h5>
+                    <p>경매 성공 전략과 심리학 분석</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🔍 가품 vs 정품 판별법</h5>
+                    <p>전문가와 함께하는 브랜드별 구별법</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🛃 관세청 직원의 통관 꿀팁</h5>
+                    <p>관세 절약 합법적 방법 투명 공개</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🏢 일본 도매상과의 24시간</h5>
+                    <p>현지 파트너 소개, 도매시장 탐방기</p>
+                </div>
+                <div class="viral-item">
+                    <h5>💎 수집가의 보물창고 공개</h5>
+                    <p>VIP 고객 컬렉션, 희귀 아이템 가치평가</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🚀 신상품 런칭 D-Day 라이브</h5>
+                    <p>일본 신제품 출시 현장 실시간 중계</p>
+                </div>
+                <div class="viral-item">
+                    <h5>⏰ 직구족의 하루 루틴</h5>
+                    <p>파워 직구 고객의 생활과 노하우</p>
+                </div>
+                <div class="viral-item">
+                    <h5>🌍 글로벌 트렌드 먼저 잡기</h5>
+                    <p>해외 신상품 트렌드, 한국 상륙 예측</p>
+                </div>
+                <div class="viral-item">
+                    <h5>👔 비드바이 직원의 숨은 일상</h5>
+                    <p>일본 현지 직원 일상, 문화차이 비하인드</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 액션 버튼 -->
+        <div class="action-buttons">
+            <button class="btn btn-cs" onclick="showCSStrategy()">CS 문제 해결 전략</button>
+            <button class="btn btn-marketing" onclick="showMarketingStrategy()">바이럴 마케팅 상세</button>
+            <button class="btn btn-education" onclick="showEducationBusiness()">교육사업 조기 런칭</button>
+            <button class="btn" onclick="showWebsiteImprovement()">웹사이트 협업 개선</button>
+        </div>
+
+        <!-- 핵심 성공 요인 -->
+        <div class="success-factors">
+            <h3 class="section-title white">✨ 성과 기반 파트너십 핵심 성공 요인</h3>
+            <div class="factors-grid">
+                <div class="factor-item">
+                    <span class="factor-icon">📊</span>
+                    <div class="factor-title">데이터 기반 정밀 타겟팅</div>
+                    <div class="factor-desc">실제 GA4 검색 데이터로<br>검증된 수요 영역 집중</div>
+                </div>
+                <div class="factor-item">
+                    <span class="factor-icon">💎</span>
+                    <div class="factor-title">신뢰도 기반 차별화</div>
+                    <div class="factor-desc">명품감정사 협업으로<br>가품 논란을 기회 전환</div>
+                </div>
+                <div class="factor-item">
+                    <span class="factor-icon">🎯</span>
+                    <div class="factor-title">단계별 확실한 성과</div>
+                    <div class="factor-desc">월별 명확한 목표와<br>구체적 실행 전략</div>
+                </div>
+                <div class="factor-item">
+                    <span class="factor-icon">🤝</span>
+                    <div class="factor-title">윈-윈 분배 구조</div>
+                    <div class="factor-desc">성과 기반 분배로<br>상호 이익 극대화</div>
+                </div>
+                <div class="factor-item">
+                    <span class="factor-icon">🛡️</span>
+                    <div class="factor-title">위험 관리 체계</div>
+                    <div class="factor-desc">기준점 보장 +<br>단계별 성과 점검</div>
+                </div>
+                <div class="factor-item">
+                    <span class="factor-icon">🚀</span>
+                    <div class="factor-title">지속 성장 기반</div>
+                    <div class="factor-desc">장기 파트너십으로<br>안정적 수익 구조</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCSStrategy() {
+            const modal = createModal('CS 문제 해결 종합 전략', `
+                <h3>🔧 20가지 CS 문제 해결 로드맵</h3>
+                
+                <h4 style="color: #e74c3c;">💰 요금 투명성 개선 방안</h4>
+                <div style="background: linear-gradient(135deg, #ffeaea 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #e74c3c;">
+                    <p><strong>1. 사전 비용 계산기 고도화</strong><br>
+                    → 관세, 배송비, 수수료 실시간 계산<br>
+                    → "추가 요금 없음" 보장 서비스</p>
+                    
+                    <p><strong>2. 투명한 요금 구조 공개</strong><br>
+                    → 모든 비용 항목 사전 안내<br>
+                    → 타사 대비 비교표 제공</p>
+                </div>
+                
+                <h4 style="color: #f39c12;">📦 배송 서비스 개선</h4>
+                <div style="background: linear-gradient(135deg, #fff4e6 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #f39c12;">
+                    <p><strong>3. AI 기반 최적 포장 시스템</strong><br>
+                    → 상품별 맞춤 포장 제안<br>
+                    → 안전성과 비용 효율성 균형</p>
+                    
+                    <p><strong>4. 실시간 배송 추적 강화</strong><br>
+                    → 현지 픽업부터 국내 도착까지<br>
+                    → 지연 시 자동 알림 및 보상</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #d4edda 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border: 2px solid #27ae60;">
+                    <h4 style="color: #155724;">🎯 예상 효과</h4>
+                    <p>• 고객 만족도 80% → 95% 향상<br>
+                    • CS 처리 시간 90% 단축<br>
+                    • 재구매율 30% 증가<br>
+                    • 신규 고객 추천 50% 증가</p>
+                </div>
+            `);
+            document.body.appendChild(modal);
+        }
+
+        function showMarketingStrategy() {
+            const modal = createModal('바이럴 마케팅 상세 전략', `
+                <h3>🎬 스토리텔링 마케팅 실행 계획</h3>
+                
+                <h4 style="color: #e74c3c;">📱 인스타그램 전략 (주 3회 업로드)</h4>
+                <div style="background: linear-gradient(135deg, #ffeaea 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #e74c3c;">
+                    <p><strong>월요일: 제품 발굴 스토리</strong><br>
+                    → "한국에 없는 일본 필수템" 시리즈<br>
+                    → 실제 구매 과정 라이브 공유</p>
+                    
+                    <p><strong>수요일: 고객 성공 사례</strong><br>
+                    → VIP 고객의 컬렉션 소개<br>
+                    → "덕질 인생템 찾기" 프로젝트</p>
+                    
+                    <p><strong>금요일: 비하인드 스토리</strong><br>
+                    → 일본 현지 직원 일상<br>
+                    → 17년 베테랑의 직구 썰</p>
+                </div>
+                
+                <h4 style="color: #27ae60;">📊 성과 측정 지표</h4>
+                <div style="background: linear-gradient(135deg, #eafaf1 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #27ae60;">
+                    <p><strong>1개월 목표:</strong> 인스타 팔로워 1,000명, 유튜브 구독자 500명<br>
+                    <strong>3개월 목표:</strong> 인스타 팔로워 5,000명, 유튜브 구독자 2,000명<br>
+                    <strong>6개월 목표:</strong> 인스타 팔로워 10,000명, 유튜브 구독자 5,000명</p>
+                </div>
+            `);
+            document.body.appendChild(modal);
+        }
+
+        function showEducationBusiness() {
+            const modal = createModal('교육사업 조기 런칭 계획', `
+                <h3>🎓 비드바이 파트너 셀러 아카데미 (1-2개월 런칭)</h3>
+                
+                <h4 style="color: #2c3e50;">📚 1개월차: 교육 기반 구축</h4>
+                <div style="background: linear-gradient(135deg, #e8f4ff 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #3498db;">
+                    <p><strong>Week 1-2: 커리큘럼 완성</strong><br>
+                    → 기초/심화/전문가 과정 세부 설계<br>
+                    → 실무진과 교육 내용 검토</p>
+                    
+                    <p><strong>Week 3-4: 콘텐츠 제작</strong><br>
+                    → 교육 영상 및 자료 제작<br>
+                    → 온라인 플랫폼 구축</p>
+                </div>
+                
+                <h4 style="color: #27ae60;">🚀 2개월차: 정식 런칭</h4>
+                <div style="background: linear-gradient(135deg, #eafaf1 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #27ae60;">
+                    <p><strong>Week 1-2: 베타 테스트</strong><br>
+                    → 내부 직원 대상 시범 교육<br>
+                    → 피드백 반영 및 개선</p>
+                    
+                    <p><strong>Week 3-4: 정식 오픈</strong><br>
+                    → 기초과정 첫 기수 모집 (20명)<br>
+                    → 마케팅과 연계한 홍보</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #d4edda 0%, #ffffff 100%); padding: 20px; border-radius: 10px; border: 2px solid #27ae60;">
+                    <h4 style="color: #155724;">🎯 조기 런칭의 장점</h4>
+                    <p>• 빠른 수익원 확보: 2개월 내 매출 발생<br>
+                    • 마케팅 연계 효과: 교육 콘텐츠 → 바이럴 마케팅<br>
+                    • 고객 생태계 구축: 교육생 → 충성 고객<br>
+                    • 브랜드 신뢰도 향상: 교육 전문성 인정</p>
+                </div>
+            `);
+            document.body.appendChild(modal);
+        }
+
+        function showWebsiteImprovement() {
+            const modal = createModal('웹사이트 협업 개선 계획', `
+                <h3>💻 개발팀과의 협업 중심 웹사이트 현대화</h3>
+                
+                <h4 style="color: #3498db;">🤝 개발팀 협업 체계 구축</h4>
+                <div style="background: linear-gradient(135deg, #e8f4ff 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #3498db;">
+                    <p><strong>상호 존중 기반 협업:</strong><br>
+                    → 개발진의 전문성 인정 및 지원<br>
+                    → 현실적 일정과 우선순위 공동 설정</p>
+                    
+                    <p><strong>월간 협업 회의 체계:</strong><br>
+                    → 고객 피드백 기반 개선 우선순위 논의<br>
+                    → 개발 일정과 마케팅 계획 조율</p>
+                </div>
+                
+                <h4 style="color: #27ae60;">🛠️ 단계별 개선 방안 (협업 중심)</h4>
+                <div style="background: linear-gradient(135deg, #eafaf1 0%, #ffffff 100%); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #27ae60;">
+                    <p><strong>1-2개월: 모바일 최적화</strong><br>
+                    → 반응형 웹 디자인 점진적 적용<br>
+                    → 모바일 주문 프로세스 간소화</p>
+                    
+                    <p><strong>3-4개월: 실시간 시스템</strong><br>
+                    → 배송 추적 시스템 업그레이드<br>
+                    → 환율 자동 업데이트 기능</p>
+                </div>
+            `);
+            document.body.appendChild(modal);
+        }
+
+        function createModal(title, content) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                padding: 20px;
+                box-sizing: border-box;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 20px;
+                border-radius: 20px;
+                max-width: 800px;
+                max-height: 90vh;
+                overflow-y: auto;
+                box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+                position: relative;
+            `;
+            
+            modalContent.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 3px solid #eee; padding-bottom: 15px;">
+                    <h2 style="color: #2c3e50; margin: 0; font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 600;">${title}</h2>
+                    <button onclick="this.closest('.modal').remove()" style="background: #e74c3c; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.3s ease;">×</button>
+                </div>
+                ${content}
+                <div style="text-align: center; margin-top: 25px;">
+                    <button onclick="this.closest('.modal').remove()" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s ease;">닫기</button>
+                </div>
+            `;
+            
+            modal.className = 'modal';
+            modal.appendChild(modalContent);
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+            
+            return modal;
+        }
+
+        // 페이지 로드 시 애니메이션 효과
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.card, .viral-item, .month-card, .problem-category');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 50);
+            });
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 관찰할 요소들 등록
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.card, .viral-item, .month-card, .problem-category');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
